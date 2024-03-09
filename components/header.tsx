@@ -6,6 +6,24 @@ import Link from "next/link";
 import { GiHandTruck } from "react-icons/gi";
 import { FaTruckFast } from "react-icons/fa6";
 
+const headerList = [
+  {
+    title: "home",
+  },
+  {
+    title: "about",
+  },
+  {
+    title: "services",
+  },
+  {
+    title: "reviews",
+  },
+  {
+    title: "contact",
+  },
+];
+
 export default function Header() {
   return (
     <header className="z-[999] relative">
@@ -20,66 +38,21 @@ export default function Header() {
         </Link>
         <nav className="">
           <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              initial={{ y: -100, x: "-50%", opacity: 0 }}
-              animate={{ y: 0, x: "-50%", opacity: 1 }}
-            >
-              <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-                href="#home"
+            {headerList.map((item) => (
+              <motion.li
+                key={item.title}
+                className="h-3/4 flex items-center justify-center relative"
+                initial={{ y: -100, x: "-50%", opacity: 0 }}
+                animate={{ y: 0, x: "-50%", opacity: 1 }}
               >
-                home
-              </Link>
-            </motion.li>
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-                href="#about"
-              >
-                about
-              </Link>
-            </motion.li>
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-                href="#services"
-              >
-                services
-              </Link>
-            </motion.li>
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-                href="#reviews"
-              >
-                reviews
-              </Link>
-            </motion.li>
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
-                href="#contact"
-              >
-                contact
-              </Link>
-            </motion.li>
+                <Link
+                  className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300"
+                  href={`#${item.title}`}
+                >
+                  {item.title}
+                </Link>
+              </motion.li>
+            ))}
           </ul>
         </nav>
         <div>theme</div>
