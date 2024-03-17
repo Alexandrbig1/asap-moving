@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <div
+    <section
       className="h-screen w-full relative bg-black bg-opacity-50"
       style={{
         background:
@@ -32,6 +32,6 @@ export default function Hero() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
