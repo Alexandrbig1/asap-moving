@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Testimonials() {
   return (
-    <div>
-      <div>
+    <div className="flex gap-4 justify-center">
+      <div className="p-4 bg-slate-200 rounded-md">
         <h4>Andrew Thompson</h4>
         <span>Art Director</span>
         <p>
@@ -11,7 +11,7 @@ export default function Testimonials() {
           omnis.
         </p>
       </div>
-      <div>
+      <div className="p-4 bg-slate-200 rounded-md">
         <h4>Andrew Thompson</h4>
         <span>Art Director</span>
         <p>
@@ -19,7 +19,7 @@ export default function Testimonials() {
           omnis.
         </p>
       </div>
-      <div>
+      <div className="p-4 bg-slate-200 rounded-md">
         <h4>Andrew Thompson</h4>
         <span>Art Director</span>
         <p>
