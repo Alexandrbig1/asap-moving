@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section>
+    <section className="flex items-center justify-center gap-9 mt-9 w-full p-7">
       <ul className="flex items-center justify-center gap-9 mt-9 w-full">
         <li className="flex flex-col p-7 rounded-lg bg-slate-500">
           <span>icon</span>
