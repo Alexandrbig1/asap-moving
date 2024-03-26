@@ -12,13 +12,13 @@ export default function Services() {
         </li>
         <li className="flex flex-col p-7 rounded-lg bg-slate-500">
           <span>icon</span>
-          <span>2 movers and a truck</span>
+          <span>3 movers and a truck</span>
           <span>price</span>
           <p>This could for studio appartment, or 1 bedroom appartment</p>
         </li>
         <li className="flex flex-col p-7 rounded-lg bg-slate-500">
           <span>icon</span>
-          <span>2 movers and a truck</span>
+          <span>4 movers and 2 truck's</span>
           <span>price</span>
           <p>This could for studio appartment, or 1 bedroom appartment</p>
         </li>
